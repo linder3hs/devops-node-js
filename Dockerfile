@@ -20,4 +20,4 @@ COPY . /usr/src/app
 
 EXPOSE 8080
 
-CMD [ "node", "index.js" ]
+CMD [ "npm", "run", "start" ]
