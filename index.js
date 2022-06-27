@@ -1,6 +1,6 @@
 import express from "express";
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 
@@ -21,6 +21,11 @@ app.get("/list", (req, res) => {
         id: 1,
         name: "Juan",
         lastName: "Perez",
+      },
+      {
+        id: 2,
+        name: "Luis",
+        lastName: "Zapata",
       },
     ],
   });
