@@ -8,7 +8,21 @@ app.get("/", (req, res) => {
   res.json({
     ok: true,
     message: "Hello World",
-    body: `Entorno ${process.env.NODE_ENV}`,
+    body: `Entorno ${process.env.NODE_ENV || "dev"}`,
+  });
+});
+
+app.get("/list", (req, res) => {
+  res.json({
+    ok: true,
+    message: "Listado de usuarios",
+    body: [
+      {
+        id: 1,
+        name: "Juan",
+        lastName: "Perez",
+      },
+    ],
   });
 });
 
