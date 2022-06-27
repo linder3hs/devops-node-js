@@ -7,6 +7,8 @@ WORKDIR /usr/src/app
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 # copying packages first helps take advantage of docker layers
+RUN npm install -g esm
+
 COPY package*.json ./
 
 RUN npm install
